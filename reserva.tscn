@@ -1,0 +1,164 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdlt6sdx3dx2f"]
+
+[ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_h43k6"]
+
+[node name="reserva" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_h43k6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_h43k6")
+
+[node name="header" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/header"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -11.5
+offset_right = 93.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_h43k6")
+text = "pousada morro do forte"
+
+[node name="main_panel" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/main_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer"]
+layout_mode = 2
+
+[node name="quarto 1" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("1_h43k6")
+text = "quarto 1"
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+columns = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "nome"
+
+[node name="LineEdit" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "telefone"
+
+[node name="LineEdit2" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label3" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "entrada"
+
+[node name="LineEdit3" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label4" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "saida"
+
+[node name="LineEdit4" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Button5" type="Button" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_h43k6")
+text = "reservar"
+
+[node name="footer" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.1
+theme = ExtResource("1_h43k6")
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/footer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.0
+offset_top = -11.5
+offset_right = 93.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_h43k6")
+text = "pousada morro do forte"
