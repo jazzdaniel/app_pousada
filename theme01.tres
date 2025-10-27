@@ -1,7 +1,10 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c0j0vl8xxqru4"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c0j0vl8xxqru4"]
 
 [ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="1_abapo"]
 [ext_resource type="StyleBox" uid="uid://bg2xpe2ig865c" path="res://line_edit_stylebox.tres" id="2_8f05s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f05s"]
+bg_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7iw2"]
 bg_color = Color(0.15294118, 0.15294118, 0.26666668, 0.78431374)
@@ -19,7 +22,7 @@ LineEdit/colors/font_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
 LineEdit/font_sizes/font_size = 32
 LineEdit/styles/focus = ExtResource("2_8f05s")
 LineEdit/styles/normal = ExtResource("1_abapo")
-LineEdit/styles/read_only = ExtResource("2_8f05s")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_8f05s")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10

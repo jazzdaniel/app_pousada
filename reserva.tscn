@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdlt6sdx3dx2f"]
+[gd_scene load_steps=3 format=3 uid="uid://cdlt6sdx3dx2f"]
 
+[ext_resource type="Script" uid="uid://dm0uerb5md5ms" path="res://reserva.gd" id="1_7c71d"]
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_h43k6"]
 
 [node name="reserva" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7c71d")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -74,7 +76,7 @@ layout_mode = 2
 [node name="quarto 1" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
+size_flags_vertical = 8
 theme = ExtResource("1_h43k6")
 text = "quarto 1"
 
@@ -131,6 +133,55 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("1_h43k6")
+
+[node name="Label8" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "n pessoas"
+
+[node name="LineEdit8" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label5" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "total dias"
+
+[node name="LineEdit5" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label6" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "valor diária"
+
+[node name="LineEdit6" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+
+[node name="Label7" type="Label" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_h43k6")
+text = "preço total"
+
+[node name="LineEdit7" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_h43k6")
+editable = false
 
 [node name="Button5" type="Button" parent="Panel/MarginContainer/VBoxContainer/main_panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 150)

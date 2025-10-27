@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://snqk10mge7vf"]
+[gd_scene load_steps=3 format=3 uid="uid://snqk10mge7vf"]
 
+[ext_resource type="Script" uid="uid://dr7nycsw0qku6" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_ig7tw"]
 
-[node name="main" type="Control"]
+[node name="main" type="Control" node_paths=PackedStringArray("_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "date_field")]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +11,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0xm2m")
+_1 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/1")
+_2 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/2")
+_3 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/3")
+_4 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/4")
+_5 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/5")
+_6 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/6")
+_7 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/7")
+_8 = NodePath("Panel/MarginContainer/VBoxContainer/Panel3/GridContainer/8")
+date_field = NodePath("Panel/MarginContainer/VBoxContainer/header2/HFlowContainer/Label2")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -55,6 +66,38 @@ size_flags_horizontal = 4
 theme = ExtResource("1_ig7tw")
 text = "pousada morro do forte"
 
+[node name="header2" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.2
+
+[node name="HFlowContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/header2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/header2/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_ig7tw")
+text = "<"
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/header2/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_ig7tw")
+text = "final de semana 01 e 02 nov"
+
+[node name="Label3" type="Label" parent="Panel/MarginContainer/VBoxContainer/header2/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_ig7tw")
+text = ">"
+
 [node name="Panel3" type="Panel" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -75,49 +118,49 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 2
 
-[node name="Button1" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="1" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "1"
 
-[node name="Button2" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="2" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "2"
 
-[node name="Button3" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="3" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "3"
 
-[node name="Button4" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="4" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "4"
 
-[node name="Button5" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="5" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "5"
 
-[node name="Button6" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="6" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "6"
 
-[node name="Button7" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="7" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
 text = "7"
 
-[node name="Button8" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
+[node name="8" type="Button" parent="Panel/MarginContainer/VBoxContainer/Panel3/GridContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme = ExtResource("1_ig7tw")
