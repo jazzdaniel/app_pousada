@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://vq6dy1sfgfwb"]
+[gd_scene load_steps=3 format=3 uid="uid://vq6dy1sfgfwb"]
 
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_1dli3"]
+[ext_resource type="Script" uid="uid://cs06mquf4b1dx" path="res://reservation.gd" id="2_6jst5"]
 
-[node name="reservation" type="Panel"]
+[node name="reservation" type="Panel" node_paths=PackedStringArray("reservation_button")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -11,6 +12,8 @@ grow_vertical = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
 theme = ExtResource("1_1dli3")
+script = ExtResource("2_6jst5")
+reservation_button = NodePath("MarginContainer/VBoxContainer/button_reservation")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -133,7 +136,7 @@ size_flags_horizontal = 8
 theme = ExtResource("1_1dli3")
 editable = false
 
-[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="button_reservation" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_vertical = 0
