@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://rb2kpyhl0lkd"]
+
+[ext_resource type="Script" uid="uid://bkfa3404mh1hk" path="res://home.gd" id="1_1ey7h"]
+[ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_tt30a"]
+
+[node name="home" type="Panel" node_paths=PackedStringArray("_1", "_2", "_3", "_4", "_5", "_6", "_7", "_8", "date_field")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_1ey7h")
+_1 = NodePath("MarginContainer/VFlowContainer/GridContainer/1")
+_2 = NodePath("MarginContainer/VFlowContainer/GridContainer/2")
+_3 = NodePath("MarginContainer/VFlowContainer/GridContainer/3")
+_4 = NodePath("MarginContainer/VFlowContainer/GridContainer/4")
+_5 = NodePath("MarginContainer/VFlowContainer/GridContainer/5")
+_6 = NodePath("MarginContainer/VFlowContainer/GridContainer/6")
+_7 = NodePath("MarginContainer/VFlowContainer/GridContainer/7")
+_8 = NodePath("MarginContainer/VFlowContainer/GridContainer/8")
+date_field = NodePath("MarginContainer/VFlowContainer/HFlowContainer/Label2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VFlowContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HFlowContainer" type="HBoxContainer" parent="MarginContainer/VFlowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VFlowContainer/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_tt30a")
+text = "<"
+
+[node name="Label2" type="Label" parent="MarginContainer/VFlowContainer/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_tt30a")
+text = "final de semana 01 e 02 nov"
+
+[node name="Label3" type="Label" parent="MarginContainer/VFlowContainer/HFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme = ExtResource("1_tt30a")
+text = ">"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+columns = 2
+
+[node name="1" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "1"
+
+[node name="2" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "2"
+
+[node name="3" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "3"
+
+[node name="4" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "4"
+
+[node name="5" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "5"
+
+[node name="6" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "6"
+
+[node name="7" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "7"
+
+[node name="8" type="Button" parent="MarginContainer/VFlowContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme = ExtResource("1_tt30a")
+text = "8"

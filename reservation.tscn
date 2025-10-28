@@ -1,0 +1,141 @@
+[gd_scene load_steps=2 format=3 uid="uid://vq6dy1sfgfwb"]
+
+[ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_1dli3"]
+
+[node name="reservation" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.7
+theme = ExtResource("1_1dli3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="quarto 1" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_1dli3")
+text = "quarto 1"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+columns = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "nome"
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "telefone"
+
+[node name="LineEdit2" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "entrada"
+
+[node name="LineEdit3" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "saida"
+
+[node name="LineEdit4" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "n pessoas"
+
+[node name="LineEdit8" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "total dias"
+
+[node name="LineEdit5" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "valor diária"
+
+[node name="LineEdit6" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "preço total"
+
+[node name="LineEdit7" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+editable = false
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("1_1dli3")
+text = "reservar"

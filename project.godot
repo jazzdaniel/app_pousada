@@ -23,6 +23,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 window/handheld/orientation=6
 
+[gui]
+
+theme/custom="uid://c0j0vl8xxqru4"
+
 [rendering]
 
 renderer/rendering_method="mobile"
