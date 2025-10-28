@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://snqk10mge7vf"]
+[gd_scene load_steps=3 format=3 uid="uid://snqk10mge7vf"]
 
+[ext_resource type="Script" uid="uid://dr7nycsw0qku6" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_ig7tw"]
 
-[node name="main" type="Control"]
+[node name="main" type="Control" node_paths=PackedStringArray("page_container")]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -10,6 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0xm2m")
+page_container = NodePath("Panel/MarginContainer/VBoxContainer/page-container")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
