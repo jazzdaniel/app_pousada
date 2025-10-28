@@ -13,7 +13,7 @@ extends Control
 var reservation_page=load('res://reserva.tscn')
 
 func _ready() -> void:
-	for i in range(1, 9): #9 (upperbound) is excluded in the range method
+	for i in range(1, 9):
 		var btn = get("_" + str(i))
 		btn.connect("pressed", Callable(self, "_on_room_pressed").bind(i))
 
