@@ -9,6 +9,7 @@ extends Panel
 @export var _6: Button
 @export var _7: Button
 @export var _8: Button
+
 @export var date_field:Label #should change to actual label later
 
 
@@ -21,4 +22,5 @@ func _ready() -> void:
 
 func _on_room_pressed(room_number: int):
 	room_selected.emit(room_number)
+	#print('Today is:',Time.get_date_dict_from_system())
 	

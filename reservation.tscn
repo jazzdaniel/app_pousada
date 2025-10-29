@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_1dli3"]
 [ext_resource type="Script" uid="uid://cs06mquf4b1dx" path="res://reservation.gd" id="2_6jst5"]
 
-[node name="reservation" type="Panel" node_paths=PackedStringArray("reservation_button", "entry_date", "exit_date", "room_id")]
+[node name="reservation" type="Panel" node_paths=PackedStringArray("reservation_button", "note_button", "entry_date", "exit_date", "room_id")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -13,7 +13,8 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.7
 theme = ExtResource("1_1dli3")
 script = ExtResource("2_6jst5")
-reservation_button = NodePath("MarginContainer/VBoxContainer/MarginContainer2/button_reservation")
+reservation_button = NodePath("MarginContainer/VBoxContainer/MarginContainer3/button_reservation")
+note_button = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário")
 entry_date = NodePath("MarginContainer/VBoxContainer/GridContainer/entry_date")
 exit_date = NodePath("MarginContainer/VBoxContainer/GridContainer/LineEdit4")
 room_id = NodePath("MarginContainer/VBoxContainer/MarginContainer/room_id")
@@ -119,6 +120,20 @@ theme = ExtResource("1_1dli3")
 alignment = 1
 select_all_on_focus = true
 
+[node name="cpf" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_1dli3")
+text = "cpf"
+
+[node name="LineEdit9" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_1dli3")
+alignment = 1
+select_all_on_focus = true
+
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -162,12 +177,20 @@ alignment = 1
 editable = false
 select_all_on_focus = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="comentário" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_bottom = 50
+size_flags_vertical = 8
+theme = ExtResource("1_1dli3")
+theme_type_variation = &"smallButton"
+text = "obs."
 
-[node name="button_reservation" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="button_reservation" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer3"]
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 size_flags_vertical = 8
