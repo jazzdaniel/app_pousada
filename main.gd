@@ -17,17 +17,19 @@ func go_to_home():
 	clear_page_container()
 	child=home.instantiate()
 	
-	print(child.room_selected)
 	child.room_selected.connect(go_to_reservation)
 	
 	page_container.add_child(child)
 	
-func go_to_reservation(room:int=5,date:String="28/out/2025"):
-	print(room,date)
+func go_to_reservation(room:int=5,date:String="28/out/25"):
 	clear_page_container()
 	child=reservation.instantiate()
 	
 	child.reservation_button.pressed.connect(go_to_home)
+	
+	child.base_entry_date=date
+	child.room_id.text="Quarto " + str(room)
+	
 	
 	page_container.add_child(child)
 	
@@ -39,6 +41,5 @@ func clear_page_container():
 	if child != []:
 		child[0].queue_free()
 		
-func tester():
-	print('tester function')
+
 #endregion

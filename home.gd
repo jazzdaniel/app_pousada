@@ -20,7 +20,5 @@ func _ready() -> void:
 		btn.connect("pressed", Callable(self, "_on_room_pressed").bind(i))
 
 func _on_room_pressed(room_number: int):
-	#room_selected.emit(room_number,"28out2025")
-	room_selected.emit()
+	room_selected.emit(room_number)
 	
-	print('room pressed')
