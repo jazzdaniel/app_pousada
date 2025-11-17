@@ -1,8 +1,10 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://c0j0vl8xxqru4"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c0j0vl8xxqru4"]
 
 [ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="1_abapo"]
 [ext_resource type="StyleBox" uid="uid://bg2xpe2ig865c" path="res://line_edit_stylebox.tres" id="2_8f05s"]
 [ext_resource type="StyleBox" uid="uid://b1q0qh6ivwo4n" path="res://small_button.tres" id="3_8f6ie"]
+[ext_resource type="StyleBox" uid="uid://bwelynsnvfidf" path="res://pop_up_hover.tres" id="3_y32pw"]
+[ext_resource type="StyleBox" uid="uid://bkx4i8q0xaobb" path="res://pop_up.tres" id="4_b3uyu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76epv"]
 bg_color = Color(0.1254902, 0.12941177, 0.10980392, 1)
@@ -37,7 +39,7 @@ Label/colors/font_color = Color(0.9843137, 0.9607843, 0.9372549, 1)
 Label/font_sizes/font_size = 32
 Label01/base_type = &"Label"
 Label01/font_sizes/font_size = 64
-LineEdit/colors/font_color = Color(0.15294118, 0.15294118, 0.26666668, 1)
+LineEdit/colors/font_color = Color(0.9843137, 0.9607843, 0.9372549, 1)
 LineEdit/font_sizes/font_size = 32
 LineEdit/styles/focus = ExtResource("2_8f05s")
 LineEdit/styles/normal = ExtResource("1_abapo")
@@ -47,6 +49,9 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
 Panel/styles/panel = SubResource("StyleBoxFlat_c7iw2")
+PopupMenu/font_sizes/font_size = 48
+PopupMenu/styles/hover = ExtResource("3_y32pw")
+PopupMenu/styles/panel = ExtResource("4_b3uyu")
 VBoxContainer/constants/separation = 10
 smallButton/base_type = &"Button"
 smallButton/font_sizes/font_size = 32
