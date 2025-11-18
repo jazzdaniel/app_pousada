@@ -5,8 +5,10 @@ extends Panel
 @export var entry_date:LineEdit
 @export var exit_date:LineEdit
 @export var room_id:Label
-@export var origem_line_edit:LineEdit
-@export var origem_pop_up:PopupMenu
+@export var comment_pop_up:PopupPanel
+@export var ok_button_text_edit:Button
+@export var comment_text_edit:TextEdit
+
 
 
 var nome:String
@@ -40,19 +42,20 @@ func _ready() -> void:
 	numero_hospedes,cpf,dias_permanencia,valor_diaria,valor_total,obs]
 	print(JSON.stringify(reservation_array))
 	
-	origem_line_edit.connect('focus_entered',func():origem_pop_up.show())
 	
 	
 
 
 #region Source PopUp Menu
 
-func _on_origem_pop_up_id_pressed(id: int) -> void:
-	origem_line_edit.text=sources[id]
-	origem_line_edit.release_focus()
-
-
-func _on_origem_pop_up_focus_exited() -> void:
-	origem_line_edit.release_focus()
 
 #endregion
+
+
+func _on_comentário_pressed() -> void:
+	comment_pop_up.show()
+	comment_text_edit.grab_focus()
+
+
+func _on_ok_button_text_edit_pressed() -> void:
+	comment_pop_up.hide()

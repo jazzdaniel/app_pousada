@@ -2,9 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_1dli3"]
 [ext_resource type="Script" uid="uid://cs06mquf4b1dx" path="res://reservation.gd" id="2_6jst5"]
-[ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="3_tb43f"]
 
-[node name="reservation" type="Panel" node_paths=PackedStringArray("reservation_button", "note_button", "entry_date", "exit_date", "room_id", "origem_line_edit", "origem_pop_up")]
+[sub_resource type="Theme" id="Theme_6jst5"]
+
+[node name="reservation" type="Panel" node_paths=PackedStringArray("reservation_button", "note_button", "entry_date", "exit_date", "room_id", "comment_pop_up", "ok_button_text_edit", "comment_text_edit")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,8 +20,9 @@ note_button = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário"
 entry_date = NodePath("MarginContainer/VBoxContainer/GridContainer/entry_date")
 exit_date = NodePath("MarginContainer/VBoxContainer/GridContainer/LineEdit4")
 room_id = NodePath("MarginContainer/VBoxContainer/MarginContainer/room_id")
-origem_line_edit = NodePath("MarginContainer/VBoxContainer/GridContainer/origem_line_edit")
-origem_pop_up = NodePath("MarginContainer/VBoxContainer/GridContainer/origem_pop_up")
+comment_pop_up = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel")
+ok_button_text_edit = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer/ok_button_text_edit")
+comment_text_edit = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer/TextEdit")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -113,15 +115,24 @@ select_all_on_focus = true
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("1_1dli3")
-text = "n pessoas"
+text = "nº pessoas"
 
-[node name="LineEdit8" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(300, 0)
+[node name="people_option" type="OptionButton" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
 theme = ExtResource("1_1dli3")
 alignment = 1
-select_all_on_focus = true
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/text = "1 pessoa"
+popup/item_0/id = 0
+popup/item_1/text = "2 pessoas"
+popup/item_1/id = 1
+popup/item_2/text = "3 pessoas"
+popup/item_2/id = 2
+popup/item_3/text = "4 pessoas"
+popup/item_3/id = 3
+popup/item_4/text = "5 pessoas"
+popup/item_4/id = 4
 
 [node name="cpf" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -186,30 +197,18 @@ size_flags_horizontal = 0
 theme = ExtResource("1_1dli3")
 text = "origem"
 
-[node name="origem_line_edit" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(300, 0)
+[node name="source_option" type="OptionButton" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
 theme = ExtResource("1_1dli3")
-theme_override_styles/read_only = ExtResource("3_tb43f")
 alignment = 1
-editable = false
-select_all_on_focus = true
-
-[node name="origem_pop_up" type="PopupMenu" parent="MarginContainer/VBoxContainer/GridContainer"]
-oversampling_override = 1.0
-mode = 2
-initial_position = 1
-size = Vector2i(250, 253)
-visible = true
-theme = ExtResource("1_1dli3")
+fit_to_longest_item = false
 item_count = 3
-item_0/text = "telefone"
-item_0/id = 0
-item_1/text = "airbnb"
-item_1/id = 1
-item_2/text = "booking"
-item_2/id = 2
+popup/item_0/text = "telefone"
+popup/item_0/id = 0
+popup/item_1/text = "airbnb"
+popup/item_1/id = 1
+popup/item_2/text = "booking"
+popup/item_2/id = 2
 
 [node name="comentário" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(100, 50)
@@ -218,6 +217,32 @@ size_flags_vertical = 8
 theme = ExtResource("1_1dli3")
 theme_type_variation = &"smallButton"
 text = "obs."
+
+[node name="PopupPanel" type="PopupPanel" parent="MarginContainer/VBoxContainer/GridContainer/comentário"]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(500, 700)
+theme = SubResource("Theme_6jst5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 490.0
+offset_bottom = 690.0
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 12.32
+theme = ExtResource("1_1dli3")
+placeholder_text = "digite sua nota"
+wrap_mode = 1
+
+[node name="ok_button_text_edit" type="Button" parent="MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+size_flags_stretch_ratio = 1.33
+text = "ok"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -231,5 +256,5 @@ size_flags_vertical = 8
 theme = ExtResource("1_1dli3")
 text = "reservar"
 
-[connection signal="focus_exited" from="MarginContainer/VBoxContainer/GridContainer/origem_pop_up" to="." method="_on_origem_pop_up_focus_exited"]
-[connection signal="id_pressed" from="MarginContainer/VBoxContainer/GridContainer/origem_pop_up" to="." method="_on_origem_pop_up_id_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/comentário" to="." method="_on_comentário_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer/ok_button_text_edit" to="." method="_on_ok_button_text_edit_pressed"]
