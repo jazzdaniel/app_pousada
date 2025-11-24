@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://c0j0vl8xxqru4"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://c0j0vl8xxqru4"]
 
 [ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="1_abapo"]
 [ext_resource type="StyleBox" uid="uid://bg2xpe2ig865c" path="res://line_edit_stylebox.tres" id="2_8f05s"]
@@ -35,8 +35,11 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.45490196, 0.49411765, 0.5647059, 1)
+border_color = Color(0.1254902, 0.12941177, 0.10980392, 1)
 expand_margin_bottom = 28.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqejp"]
+bg_color = Color(0.45490196, 0.49411765, 0.5647059, 1)
 
 [resource]
 Button/colors/font_color = Color(0.9843137, 0.9607843, 0.9372549, 1)
@@ -68,6 +71,7 @@ PopupMenu/styles/hover = ExtResource("3_y32pw")
 PopupMenu/styles/panel = ExtResource("4_b3uyu")
 PopupPanel/styles/panel = SubResource("StyleBoxFlat_b3uyu")
 TextEdit/font_sizes/font_size = 32
+TextEdit/styles/normal = SubResource("StyleBoxFlat_eqejp")
 VBoxContainer/constants/separation = 10
 smallButton/base_type = &"Button"
 smallButton/font_sizes/font_size = 32

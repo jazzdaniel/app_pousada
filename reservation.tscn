@@ -242,6 +242,7 @@ wrap_mode = 1
 layout_mode = 2
 size_flags_vertical = 10
 size_flags_stretch_ratio = 1.33
+theme = ExtResource("1_1dli3")
 text = "ok"
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
