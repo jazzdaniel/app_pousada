@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkiaxk5e3bbs4"]
+
+[ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_d4o2l"]
+
+[node name="calendar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_d4o2l")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -868.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 65.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_d4o2l")
+
+[node name="previous_month" type="Button" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_d4o2l")
+text = "<"
+
+[node name="month label" type="Label" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "november 2025 "
+
+[node name="next_month" type="Button" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_d4o2l")
+text = ">"
+
+[node name="columns_box" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="mon" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/mon"]
+layout_mode = 2
+text = "seg"
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer/columns_box/mon"]
+layout_mode = 2
+theme = ExtResource("1_d4o2l")
+theme_type_variation = &"button_calendar_day"
+text = "13"
+
+[node name="rows_box2" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box2"]
+layout_mode = 2
+text = "ter"
+
+[node name="rows_box3" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box3"]
+layout_mode = 2
+text = "qua"
+
+[node name="rows_box4" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box4"]
+layout_mode = 2
+text = "qui"
+
+[node name="rows_box5" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box5"]
+layout_mode = 2
+text = "sex"
+
+[node name="rows_box6" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box6"]
+layout_mode = 2
+text = "sab"
+
+[node name="rows_box7" type="VBoxContainer" parent="Panel/VBoxContainer/columns_box"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/columns_box/rows_box7"]
+layout_mode = 2
+text = "dom"
