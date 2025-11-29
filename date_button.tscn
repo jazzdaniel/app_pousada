@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20mbepfsequi"]
+
+[ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_6e13v"]
+[ext_resource type="Script" uid="uid://bh37dvji4qohy" path="res://date_button.gd" id="2_yhf8g"]
+
+[node name="date_button" type="Button"]
+theme = ExtResource("1_6e13v")
+theme_type_variation = &"button_calendar_day"
+text = "13"
+script = ExtResource("2_yhf8g")
