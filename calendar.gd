@@ -5,6 +5,10 @@ extends Control
 @export var previous_button:Button
 @export var next_button:Button
 
+var year_today=Time.get_date_dict_from_system().year
+var month_today=Time.get_date_dict_from_system().month
+var day_today=Time.get_date_dict_from_system().day
+
 
 const date_button_scene:PackedScene=preload("res://date_button.tscn")
 const month_names:Array=['janeiro','fevereiro','março',\
@@ -54,6 +58,7 @@ func set_calendar():
 		
 func add_date_button(date:Dictionary,index:int):
 		var date_button=date_button_scene.instantiate()
+		date_button.calendar_ref=self
 		date_button.date=date
 		column_box.get_children()[index].add_child(date_button)
 		
