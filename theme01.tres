@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://c0j0vl8xxqru4"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://c0j0vl8xxqru4"]
 
 [ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="1_abapo"]
 [ext_resource type="StyleBox" uid="uid://bg2xpe2ig865c" path="res://line_edit_stylebox.tres" id="2_8f05s"]
@@ -40,6 +40,10 @@ expand_margin_bottom = 28.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eqejp"]
 bg_color = Color(0.45490196, 0.49411765, 0.5647059, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3uyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y32pw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbuct"]
 bg_color = Color(0.54509807, 0.42745098, 0.6117647, 1)
@@ -83,9 +87,14 @@ TextEdit/styles/normal = SubResource("StyleBoxFlat_eqejp")
 VBoxContainer/constants/separation = 10
 button_calendar_day/base_type = &"Button"
 button_calendar_day/font_sizes/font_size = 32
-button_callendar_today/base_type = &"Button"
-button_callendar_today/font_sizes/font_size = 32
-button_callendar_today/styles/normal = SubResource("StyleBoxFlat_hbuct")
+button_calendar_day/styles/normal = SubResource("StyleBoxEmpty_b3uyu")
+button_calendar_not_this_month/base_type = &"Button"
+button_calendar_not_this_month/colors/font_color = Color(0.7294118, 0.7294118, 0.7294118, 1)
+button_calendar_not_this_month/font_sizes/font_size = 32
+button_calendar_not_this_month/styles/normal = SubResource("StyleBoxEmpty_y32pw")
+button_calendar_today/base_type = &"Button"
+button_calendar_today/font_sizes/font_size = 32
+button_calendar_today/styles/normal = SubResource("StyleBoxFlat_hbuct")
 smallButton/base_type = &"Button"
 smallButton/font_sizes/font_size = 32
 smallButton/styles/normal = ExtResource("3_8f6ie")

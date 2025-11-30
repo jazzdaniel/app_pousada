@@ -9,6 +9,9 @@ var year_today=Time.get_date_dict_from_system().year
 var month_today=Time.get_date_dict_from_system().month
 var day_today=Time.get_date_dict_from_system().day
 
+var month_page=month_today 
+#this will change when changing months
+
 
 const date_button_scene:PackedScene=preload("res://date_button.tscn")
 const month_names:Array=['janeiro','fevereiro','março',\
