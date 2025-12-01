@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://vq6dy1sfgfwb"]
+[gd_scene load_steps=5 format=3 uid="uid://vq6dy1sfgfwb"]
 
 [ext_resource type="Theme" uid="uid://c0j0vl8xxqru4" path="res://theme01.tres" id="1_1dli3"]
 [ext_resource type="Script" uid="uid://cs06mquf4b1dx" path="res://reservation.gd" id="2_6jst5"]
+[ext_resource type="StyleBox" uid="uid://bycncr5c6frp1" path="res://button_styleboxflat.tres" id="3_tb43f"]
 
 [sub_resource type="Theme" id="Theme_6jst5"]
 
@@ -17,8 +18,8 @@ theme = ExtResource("1_1dli3")
 script = ExtResource("2_6jst5")
 reservation_button = NodePath("MarginContainer/VBoxContainer/MarginContainer3/button_reservation")
 note_button = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário")
-entry_date = NodePath("MarginContainer/VBoxContainer/GridContainer/entry_date")
-exit_date = NodePath("MarginContainer/VBoxContainer/GridContainer/LineEdit4")
+entry_date = NodePath("MarginContainer/VBoxContainer/GridContainer/entry_button")
+exit_date = NodePath("MarginContainer/VBoxContainer/GridContainer/exit_button")
 room_id = NodePath("MarginContainer/VBoxContainer/MarginContainer/room_id")
 comment_pop_up = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel")
 ok_button_text_edit = NodePath("MarginContainer/VBoxContainer/GridContainer/comentário/PopupPanel/VBoxContainer/ok_button_text_edit")
@@ -89,13 +90,10 @@ size_flags_horizontal = 0
 theme = ExtResource("1_1dli3")
 text = "entrada"
 
-[node name="entry_date" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(300, 0)
+[node name="entry_button" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-theme = ExtResource("1_1dli3")
-alignment = 1
-select_all_on_focus = true
+theme_type_variation = &"smallButton"
+theme_override_styles/normal = ExtResource("3_tb43f")
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -103,13 +101,10 @@ size_flags_horizontal = 0
 theme = ExtResource("1_1dli3")
 text = "saida"
 
-[node name="LineEdit4" type="LineEdit" parent="MarginContainer/VBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(300, 0)
+[node name="exit_button" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-theme = ExtResource("1_1dli3")
-alignment = 1
-select_all_on_focus = true
+theme_type_variation = &"smallButton"
+theme_override_styles/normal = ExtResource("3_tb43f")
 
 [node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2

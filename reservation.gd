@@ -1,15 +1,17 @@
 extends Panel
+class_name Calendar
 
 @export var reservation_button:Button
 @export var note_button:Button
-@export var entry_date:LineEdit
-@export var exit_date:LineEdit
+@export var entry_date:Button
+@export var exit_date:Button
 @export var room_id:Label
 @export var comment_pop_up:PopupPanel
 @export var ok_button_text_edit:Button
 @export var comment_text_edit:TextEdit
 
 
+var calendar_scene=preload("res://calendar.tscn")
 
 var nome:String
 var telefone:String
@@ -42,6 +44,8 @@ func _ready() -> void:
 	numero_hospedes,cpf,dias_permanencia,valor_diaria,valor_total,obs]
 	print(JSON.stringify(reservation_array))
 	
+	entry_date.pressed.connect(_open_entry_calendar)
+	exit_date.pressed.connect(_open_exit_calendar)
 	
 	
 
@@ -59,3 +63,11 @@ func _on_comentário_pressed() -> void:
 
 func _on_ok_button_text_edit_pressed() -> void:
 	comment_pop_up.hide()
+	
+func _open_entry_calendar():
+	var instance=calendar_scene.instantiate()
+	add_child(instance)
+	
+	pass
+func _open_exit_calendar():
+	pass

@@ -24,4 +24,3 @@ func highlight_today():
 func shadow_last_and_next_month():
 	if calendar_ref.selected_date.month != date.month:
 			self.theme_type_variation=("button_calendar_not_this_month")
-			print ('mind the bogus')
